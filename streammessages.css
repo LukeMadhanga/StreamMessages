@@ -1,0 +1,31 @@
+#stream-message-output {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.stream-message {
+    padding: 20px;
+    background: #FFF;
+    position: relative;
+    display: inline-block;
+    max-width: 90%;
+    border-right: solid 5px #EEE;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0px 0px 1px #AAA;
+    cursor: default;
+    margin: 10px 0 0;
+}
+.stream-message-close {
+    margin: 0 0 0 10px;
+    font-weight: bold;
+    color: #A4CCF4;
+    cursor: pointer;
+    -webkit-transition: color 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+}
+.stream-message-close:hover {
+    color: #3B9AFB;
+}
