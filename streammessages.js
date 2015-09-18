@@ -52,7 +52,9 @@ function streamMessages() {
      * @param {object} attrs More attributes to be applied to the rendered item
      */
     this.renderItem = function (outputto, msg, attrs) {
-        var main = getHtml('div', msg + getHtml('span', 'dismiss', null, 'stream-message-close'), null, 'stream-message', attrs);
+        var main = getHtml('div', getHtml('div', getHtml('span', msg, null, 'stream-message-msg') 
+                + getHtml('span', 'dismiss', null, 'stream-message-close'), null, 'stream-message-main')
+                + getHtml('div', null, null, 'stream-message-bg'), null, 'stream-message', attrs);
         outputto.append(getHtml('div', main, null, 'stream-message-wrapper'));
     };
     
@@ -113,7 +115,10 @@ function streamMessages() {
             }
         }
     }
-        
+
 };
 streamMessages = new streamMessages();
-streamMessages.init();
+
+$(function () {
+    streamMessages.init();
+});
